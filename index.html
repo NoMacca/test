@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yoga in Mansfield</title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header class="container sticky top-0 mx-auto bg-white py-2">
+      <div class="container mx-auto hidden px-4 sm:flex">
+        <div class="flex-1"></div>
+        <div
+          class="flex-2 lg:text- xl flex items-center justify-center transition ease-in-out"
+        >
+          <nav class="space-x-4">
+            <a
+              href="#instructors"
+              class="uppercase text-gray-700 hover:text-gray-900"
+              >Instructors</a
+            >
+            <a
+              href="#timetable"
+              class="uppercase text-gray-700 hover:text-gray-900"
+              >Timetable</a
+            >
+            <a href="#price" class="uppercase text-gray-700 hover:text-gray-900"
+              >Pricing & Booking</a
+            >
+            <a
+              href="#location"
+              class="uppercase text-gray-700 hover:text-gray-900"
+              >Location</a
+            >
+            <a
+              href="#gallery"
+              class="uppercase text-gray-700 hover:text-gray-900"
+              >Gallery</a
+            >
+          </nav>
+        </div>
+        <div class="flex-1"></div>
+      </div>
+      <!-- Small Screen -->
+      <div class="container mx-auto flex flex-row-reverse px-4 sm:hidden">
+        <button id="menu-btn" class="" onclick="toggleMenu('modal-menu')">
+          <i class="fa-solid fa-bars text-gray-700 hover:text-gray-900"></i>
+        </button>
+      </div>
+    </header>
+
+    <header id="modal-menu" class="hidden">
+      <div class="fixed inset-0 z-50 flex bg-white">
+        <button
+          id="menu-btn"
+          class="absolute right-4 top-4"
+          onclick="toggleMenu('modal-menu')"
+        >
+          <i
+            class="fa-solid fa-xmark p-2 text-gray-700 hover:bg-gray-500 hover:text-gray-900"
+          ></i>
+        </button>
+
+        <div class="w-1/2 px-2 py-8">
+          <ul class="space-y-2">
+            <li
+              class="text-2xl font-semibold uppercase text-gray-700 hover:text-gray-900"
+            >
+              <a
+                href="#instructors"
+                onclick="toggleMenu('modal-menu')"
+                class="block"
+                >Instructors</a
+              >
+            </li>
+            <li
+              class="text-2xl font-semibold uppercase text-gray-700 hover:text-gray-900"
+            >
+              <a
+                href="#timetable"
+                onclick="toggleMenu('modal-menu')"
+                class="block"
+                >Timetable</a
+              >
+            </li>
+            <li
+              class="text-2xl font-semibold uppercase text-gray-700 hover:text-gray-900"
+            >
+              <a href="#price" onclick="toggleMenu('modal-menu')" class="block"
+                >Pricing & Booking</a
+              >
+            </li>
+            <li
+              class="text-2xl font-semibold uppercase text-gray-700 hover:text-gray-900"
+            >
+              <a
+                href="#location"
+                onclick="toggleMenu('modal-menu')"
+                class="block"
+                >Location</a
+              >
+            </li>
+            <li
+              class="text-2xl font-semibold uppercase text-gray-700 hover:text-gray-900"
+            >
+              <a
+                href="#gallery"
+                onclick="toggleMenu('modal-menu')"
+                class="block"
+                >Gallery</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mx-auto grid gap-2">
+      <section class="bg-black py-40 text-white">
+        <div class="container mx-auto text-center">
+          <h1 class="text-6xl font-bold text-white sm:text-8xl">
+            Yoga in Mansfield
+          </h1>
+          <p class="mt-4 text-lg"></p>
+        </div>
+      </section>
+
+      <section
+        id="instructors"
+        class="container mx-auto grid gap-20 bg-slate-50 py-10"
+      >
+        <h1 class="py-2 text-center text-6xl">Instructors</h1>
+
+        <div class="container mx-auto grid gap-2 sm:grid-cols-3">
+          <div
+            class="mx-2 rounded-lg bg-blue-200 p-2 pt-4"
+            onclick="toggleMenu('modal-chris')"
+          >
+            <img class="mx-auto hover:cursor-pointer" src="img/chris.jpg" />
+            <h1 class="text-center text-3xl text-gray-900">Chris</h1>
+          </div>
+          <div
+            onclick="toggleMenu('modal-uschi')"
+            class="mx-2 rounded-lg bg-blue-200 p-2 pt-4"
+          >
+            <img class="mx-auto hover:cursor-pointer" src="img/uschi.jpeg" />
+            <h1 class="text-center text-3xl text-gray-900">Uschi</h1>
+          </div>
+          <div
+            onclick="toggleMenu('modal-leith')"
+            class="mx-2 rounded-lg bg-blue-200 p-2 pt-4"
+          >
+            <img
+              class="mx-auto hover:cursor-pointer"
+              src="img/leith_and_suther.jpg"
+            />
+            <h1 class="text-center text-3xl text-gray-900">Leith</h1>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="timetable"
+        class="container mx-auto grid gap-2 bg-black py-10"
+      >
+        <h1 class="py-2 text-center text-6xl text-white">Timetable</h1>
+
+        <table class="mx-auto rounded-lg bg-black text-white sm:w-10/12">
+          <thead>
+            <tr class="border border-gray-300">
+              <th class="rounded-tl-lg px-4 py-2 text-left">Day</th>
+              <th class="px-4 py-2 text-left">Time</th>
+              <th class="hidden px-4 py-2 text-left sm:table-cell">Class</th>
+              <th class="rounded-tr-lg px-4 py-2 text-left">Instructor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border border-gray-300">
+              <td class="px-4 py-2">Monday</td>
+              <td class="px-4 py-2">5:30 PM</td>
+              <td class="hidden px-4 py-2 sm:table-cell">Yoga Course</td>
+              <td class="px-4 py-2">Uschi</td>
+            </tr>
+            <tr class="border border-gray-300">
+              <td class="px-4 py-2">Tuesday</td>
+              <td class="px-4 py-2">5:30 PM</td>
+              <td class="hidden px-4 py-2 sm:table-cell">
+                Prenatal Yoga Course
+              </td>
+              <td class="px-4 py-2">Shayne</td>
+            </tr>
+            <tr class="border border-gray-300">
+              <td class="px-4 py-2">Wednesday</td>
+              <td class="px-4 py-2">5:30 PM</td>
+              <td class="hidden px-4 py-2 sm:table-cell">Dynamic Flow</td>
+              <td class="px-4 py-2">Leith</td>
+            </tr>
+            <tr class="border border-gray-300">
+              <td class="px-4 py-2">Thursday</td>
+              <td class="px-4 py-2">5:30 PM</td>
+              <td class="hidden px-4 py-2 sm:table-cell">Release/Yin</td>
+              <td class="px-4 py-2">Leith</td>
+            </tr>
+            <tr class="border border-gray-300">
+              <td class="px-4 py-2">Saturday</td>
+              <td class="px-4 py-2">8:00 AM</td>
+              <td class="hidden px-4 py-2 sm:table-cell">Dynamic Flow</td>
+              <td class="px-4 py-2">Ari</td>
+            </tr>
+            <tr class="border border-gray-300">
+              <td class="px-4 py-2">Saturday</td>
+              <td class="px-4 py-2">9:30 AM</td>
+              <td class="hidden px-4 py-2 sm:table-cell">Slow Flow</td>
+              <td class="px-4 py-2">Leith</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section
+        id="price"
+        class="container mx-auto grid gap-2 bg-slate-50 py-10"
+      >
+        <h1 class="py-2 text-center text-6xl">Pricing & Booking</h1>
+
+        <div class="mx-auto max-w-sm overflow-hidden bg-pink-200 p-6">
+          <div class="px-6 py-4 text-gray-900">
+            <div class="mb-2 text-center text-4xl font-bold">
+              <i class="fa-solid fa-money-bill"></i>
+              $15/class
+            </div>
+            <p class="text-center text-2xl">
+              Ten spaces per class <br />Text 0412 503 591 to secure your place
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="location"
+        class="container mx-auto grid gap-2 bg-black py-10"
+      >
+        <h1 class="py-2 text-center text-6xl text-white">Location</h1>
+        <iframe
+          class="mx-auto w-10/12 rounded-lg"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101899.16780936779!2d146.0151511456602!3d-37.049165757509385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b27c9400f40ace9%3A0x613291f91b4d6a00!2sYoga%20in%20Mansfield!5e0!3m2!1sen!2sau!4v1718773325388!5m2!1sen!2sau"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <div class="mx-auto">
+          <a
+            class="text-white hover:text-blue-500"
+            href="https://maps.app.goo.gl/DqsqLTVQ9XvNsA2c8"
+          >
+            <i class="fa-solid fa-location-dot text-white"></i>
+            6D, 20 Highett Street, Mansfield VIC
+          </a>
+        </div>
+      </section>
+
+      <section
+        id="gallery"
+        class="container mx-auto grid gap-2 bg-slate-50 pt-10"
+      >
+        <h1 class="py-2 text-center text-6xl">Gallery</h1>
+
+        <div class="grid grid-cols-3 gap-2">
+          <div class="col-span-1">
+            <img src="img/studio_7.jpg" alt="shelfs" />
+          </div>
+          <div class="col-span-2 row-span-1">
+            <img src="img/studio_1.jpg" alt="mats" />
+          </div>
+          <div class="col-span-2">
+            <img
+              class="h-full w-full object-cover"
+              src="img/studio_4.jpg"
+              alt="equipment"
+            />
+          </div>
+          <div>
+            <img
+              class="h-full w-full object-cover"
+              src="img/studio_3.jpg"
+              alt="chairs"
+            />
+          </div>
+          <div class="bg-red-200 object-cover">
+            <img src="img/studio_2.jpg" alt="side_room" />
+          </div>
+          <div class="bg-green-200">
+            <img src="img/studio_5.jpg" alt="sculture" />
+          </div>
+          <div class="bg-purple-200">
+            <img src="img/studio_6.jpg" alt="reflection" />
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-black py-12">
+        <p class="p-4"></p>
+      </footer>
+    </main>
+
+    <header id="modal-chris" class="hidden">
+      <div class="fixed inset-0 z-50 flex bg-white">
+        <button
+          id="menu-btn"
+          class="absolute right-4 top-4"
+          onclick="toggleMenu('modal-chris')"
+        >
+          <i
+            class="fa-solid fa-xmark p-2 text-gray-700 hover:bg-gray-500 hover:text-gray-900"
+          ></i>
+        </button>
+
+        <div class="">
+          <div class="p-6 text-justify">
+            <img
+              src="img/chris.jpg"
+              alt="Yoga Teacher"
+              class="mx-auto rounded"
+            />
+            <h2 class="mt-4 text-center text-2xl font-semibold text-gray-800">
+              Chris
+            </h2>
+            <p class="mt-2 text-gray-600">
+              Chris Johnstone has been a school teacher for over 30 years and
+              has taught yoga since 2015. Chris completed his yoga teacher
+              training in Rishikesh India and additional yoga courses including
+              yin yoga. Chris believes that yoga is for everyone irrespective of
+              gender, age, flexibility, balance and strength as practitioners
+              work within their own body's limitations. Chris is passionate
+              about the mental and physical benefits of regular yoga practise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <header id="modal-uschi" class="hidden">
+      <div class="fixed inset-0 z-50 flex bg-white">
+        <button
+          id="menu-btn"
+          class="absolute right-4 top-4"
+          onclick="toggleMenu('modal-uschi')"
+        >
+          <i
+            class="fa-solid fa-xmark p-2 text-gray-700 hover:bg-gray-500 hover:text-gray-900"
+          ></i>
+        </button>
+
+        <div class="">
+          <div class="p-6 text-justify">
+            <img
+              src="img/uschi.jpeg"
+              alt="Yoga Teacher"
+              class="mx-auto rounded"
+            />
+            <h2 class="mt-4 text-center text-2xl font-semibold text-gray-800">
+              Uschi
+            </h2>
+            <p class="mt-2 text-gray-600">
+              Uschi is constantly in awe of the miracle that is our
+              body-mind-heart. She loves nothing more than meeting others in
+              movement, connection and exploration of this beautiful lived
+              experience. Her journey into movement medicine began in 2008 with
+              a full certification in clinical pilates This opened her to the
+              world of mind-body connection and the wisdom of the body. After
+              running her own small pilates studio for a few years she set sail
+              overseas and followed her curiosity and joy into an ongoing study
+              of yoga, conscious dance, thai yoga massage, craniosacral therapy,
+              KaHuna massage and ZenThai Shiatsu. Uschi offers massage in
+              Mansfield via her business Wild Essence Healing; and runs local
+              women's circles and nature-based experiences. When not working she
+              can often be found exploring mountains and streams; hands in the
+              veg patch; or with paint-brush flowing at home.
+              <br /><br />
+              <strong> Class description: </strong>
+              Uschi's classes are a slow flowing blend of alignment based
+              vinyasa, pilates principles, mindfulness and breath. Grounding and
+              centring, the sessions are a place to connect, breathe, move and
+              come home to your body, your environment and your heart. Suitable
+              for both beginners and experienced practitioners.
+
+              <a
+                class="text-blue-700 underline"
+                href="https://www.wildessencehealing.com/>www.windessencehealing.com"
+                >www.windessencehealing.com</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <header id="modal-leith" class="hidden">
+      <div class="fixed inset-0 z-50 flex bg-white">
+        <button
+          id="menu-btn"
+          class="absolute right-4 top-4"
+          onclick="toggleMenu('modal-leith')"
+        >
+          <i
+            class="fa-solid fa-xmark p-2 text-gray-700 hover:bg-gray-500 hover:text-gray-900"
+          ></i>
+        </button>
+
+        <div class="">
+          <div class="p-6 text-justify">
+            <img
+              src="img/leith_and_suther.jpg"
+              alt="Yoga Teacher"
+              class="mx-auto rounded"
+            />
+            <h2 class="mt-4 text-center text-2xl font-semibold text-gray-800">
+              Leith
+            </h2>
+            <p class="mt-2 text-gray-600">
+              Leith is originally from Aotearoa New Zealand and moved back to
+              Mansfield at the start of 2021. Leith first starting regularly
+              practicing yoga in 2006 and completed her first 200hr Vinyasa
+              training in 2012 while living here in Mansfield through SomaChi, a
+              Melbourne studio. This teaching's beautiful, grounded, and dynamic
+              sequencing, as well as the accompanying Vippasana based meditation
+              are foundations that have stayed with her. <br /><br />
+              In between then and now Leith has practiced yoga in the different
+              places she has lived (Germany, Rwanda and Thailand) and many
+              others travelled to along the way. This included practicing
+              throughout the entirety of both pregnancies with her two young
+              children and postnatally. Yoga's physicality, breathwork,
+              spiritual teachings, long lineages of wisdom, invitations to sit
+              with challenge and generous community have stood her in strong
+              stead through many big changes and life's day-to-day.<br /><br />
+              In 2020, before returning to Mansfield, Leith completed a second
+              200hr Vinyasa teacher training through Awhi Yoga and Wellbeing in
+              Te Whanganui-a-tara/Wellington, Aotearoa NZ. Two significant
+              focuses of this course were the furthering of a deep sense of
+              service as Yoga teachers and the exploration of affinities between
+              the ancient teachings from which Yoga originated and those of Te
+              Ao Māori (the Māori worldview). She looks forward to sharing all
+              she has learnt, loves and is forever discovering more about in
+              class.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script src="script.js"></script>
+  </body>
+</html>
